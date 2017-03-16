@@ -281,7 +281,7 @@ public class ReactWebViewManager extends SimpleViewManager<WebView> {
 
     public void linkBridge() {
       if (messagingEnabled) {
-        if (ReactBuildConfig.DEBUG && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        /* if (ReactBuildConfig.DEBUG && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
           // See isNative in lodash
           String testPostMessageNative = "String(window.postMessage) === String(Object.hasOwnProperty).replace('hasOwnProperty', 'postMessage')";
           evaluateJavascript(testPostMessageNative, new ValueCallback<String>() {
@@ -292,7 +292,7 @@ public class ReactWebViewManager extends SimpleViewManager<WebView> {
               }
             }
           });
-        }
+        } */
 
         loadUrl("javascript:(" +
           "window.originalPostMessage = window.postMessage," +
